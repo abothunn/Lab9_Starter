@@ -177,6 +177,10 @@
         this.name = "GlobalError";
       }
     }
+
+    window.onerror = (message, source, lineno, colno, error) => {
+      console.log('global error caught:', message);
+    };
   </script>
 </body>
 
